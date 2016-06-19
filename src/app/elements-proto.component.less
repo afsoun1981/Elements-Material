@@ -1,7 +1,11 @@
+@color1: #002f52;
+@color2: #184262;
+@color3: #f6f6f6;
+
 /* Header section */
 .header-toolbar {
-	background-color: #002f52;
-	border-bottom: 1px solid #184262;
+	background-color: @color1;
+	border-bottom: 1px solid @color2;
 	padding: 0 10px;
 }
 
@@ -26,7 +30,7 @@
 /* Body section */
 
 [el-body], el-body {
-	background-color: #f6f6f6;
+	background-color: @color3;
 	height: 100%;
 	width: 100%;
 }
@@ -34,5 +38,5 @@
 [el-side-toolbar], el-side-toolbar {
 	height: 100%;
 	width: 42px;
-	background-color: #002f52;
+	background-color: @color1;
 }
