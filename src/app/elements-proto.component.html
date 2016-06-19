@@ -1,17 +1,42 @@
-<h1>
-  {{title}}
-</h1>
+<!-- Header section -->
+<md-toolbar class="toolbar">
+	<header el-header class="toolbar__header">
+		<img src="app/res/img/logo.png">
+	</header>
 
-<button md-button> Flat Button </button>
+	<nav el-header-nav class="toolbar__nav">
+		<div class="toolbar__nav__flex-left"></div>
 
-<button md-raised-button> Flat Button </button>
+		<div class="toolbar__nav__flex-center">
+			<div class="toolbar__nav__flex-center__searchbox">
+				<input type="text">
+				<button>Sh</button>
+				<button>Bo</button>
+			</div>
+		</div>
+		
+		<div class="toolbar__nav__flex-right">
+			<div class="toolbar__nav__flex-right__notification">
+				<button>Ta</button>
+				<button>Al</button>
+				<button>No</button>
+			</div>
+		</div>
 
-<el-afsoun *ngFor="let dog of dogs">Content <b>from</b> el-afsoun for {{dog.name}}</el-afsoun>
+		<div class="toolbar__menu">
+			<button>Hm</button>
+		</div>
+	</nav>
+</md-toolbar>
 
-<!--md-nav-list>
-  <md-list-item *ngFor="let dog of dogs">
-    <md-icon md-list-icon>AAA</md-icon>
-    <span md-line>{{dog.name}}</span>
-    <span md-line class="secondary">BBB</span>
-  </md-list-item>
-</md-nav-list-->
+<!-- Body section -->
+<div class="content">
+	<aside el-side-toolbar></aside>
+
+	<el-afsoun *ngFor="let dog of dogs">Content <b>from</b> el-afsoun for {{dog.name}}</el-afsoun>
+
+	<!--
+	<div el-column></div>
+	<div el-column></div>
+	-->
+</div>
