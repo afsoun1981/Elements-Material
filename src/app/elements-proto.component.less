@@ -1,65 +1,7 @@
-@color1: #002f52;
-@color2: #184262;
-@color3: #f6f6f6;
+@import "src/less/vars.less";
+@import "src/less/mixins.less";
 
 /* Header section */
-.toolbar {
-	background-color: @color1;
-	border-bottom: 1px solid @color2;
-	padding: 0 10px;
-
-	.toolbar__header {
-		flex: 0 0 118px;
-		height: 100%;
-
-		/* TODO: TEMP solution until we have better images */
-		img {
-			position: relative;
-			top: 10px;
-			width: 118px;
-		}
-	}
-
-	.toolbar__nav {
-		align-items: center;
-
-		display: flex;
-		flex: 1 1;
-		height: 100%;
-
-    	.toolbar__nav__flex-left {
-			flex: 1 1 50%;
-    	}
-
-    	.toolbar__nav__flex-center {
-			flex: 0 0 360px;
-			text-align: center;
-
-			/* TODO: remove after debugging */
-			outline: 1px dashed red;
-
-			.toolbar__nav__flex-center__searchbox {
-				display: inline-block;
-			}
-		}
-
-    	.toolbar__nav__flex-right {
-			flex: 1 1 50%;
-			text-align: center;
-
-			.toolbar__nav__searchbox__notification-area {
-				display: inline-block;
-			}
-    	}
-
-		.toolbar__menu {
-			flex: 0 0 36px;
-
-			/* TODO: remove after debugging */
-			outline: 1px dashed red;
-		}
-	}
-}
 
 /* Body section */
 .content {
