@@ -1,3 +1,4 @@
+/// <reference path="../typings.d.ts" />
 import { Component } from '@angular/core';
 import {MdToolbar} from '@angular2-material/toolbar';
 import {MdButton} from '@angular2-material/button';
@@ -8,6 +9,7 @@ import {MdInput} from '@angular2-material/input';
 import {MdCheckbox} from '@angular2-material/checkbox';
 import {MdRadioButton, MdRadioGroup, MdRadioDispatcher} from '@angular2-material/radio';
 import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
+import {MdAfsoun} from './components/afsoun';
 
 @Component({
   moduleId: module.id,
@@ -24,14 +26,15 @@ import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
     MdCheckbox,
     MdRadioGroup,
     MdRadioButton,
-    MdIcon
+    MdIcon,
+    MdAfsoun
   ],
   providers: [MdIconRegistry, MdRadioDispatcher]
 })
 export class ElementsProtoAppComponent {
-  title = 'elements-proto works!';
+  title: String = 'elements-proto works!';
 
-    dogs: Object[] = [
+  dogs: Object[] = [
     {name: "Porter"},
     {name: "Mal"},
     {name: "Razzle"},
