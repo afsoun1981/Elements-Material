@@ -1,9 +1,14 @@
 @import "src/less/vars.less";
 @import "src/less/mixins.less";
 
-.el-menu {
+:host {
+    position: absolute;
+    display: block;
+    top: 50px;
+    left: 400px;
+
 	background-color: @color9;
-    border: 1px solid red;
+    border: 1px solid @color2;
     display: block;
     max-height: 300px;
     padding: 5px;
