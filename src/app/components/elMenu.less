@@ -1,0 +1,36 @@
+@import "src/less/vars.less";
+@import "src/less/mixins.less";
+
+.el-menu {
+	background-color: @color9;
+    border: 1px solid red;
+    width: 200px;
+    max-height: 300px;
+    display: block;
+    padding: 5px;
+
+    .el-menu__title {
+	    background-color: beige;
+	    border-bottom: 1px solid @color7;
+    	padding-bottom: 5px;
+    }
+
+    .el-menu__items {
+    	padding: 5px;
+
+    	.el-menu__items__item {
+    		padding: 5px 0;
+    		border-bottom: 1px solid @color7;
+    		
+    		.el-menu__items__item__title {
+    			font-weight: bold;
+    			margin-bottom: 3px;
+    		}
+
+    		.el-menu__items__item__description {}
+    	}
+    }
+
+
+ 
+}
