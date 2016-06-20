@@ -27,7 +27,7 @@ import {ElMenu} from './components/elMenu';
     MdRadioButton,
     MdIcon,
     ElToolbar,
-    ElMenu,
+    ElMenu
   ],
   providers: [MdIconRegistry, MdRadioDispatcher]
 })
