@@ -2,20 +2,23 @@
 @import "src/less/mixins.less";
 
 .badge-button {
-	border: 1px solid @color2;
-
-	position: relative;
+	border: 1px solid @color4;
+	border-radius: 20px;
+	color: @color9;
+    min-width: 40px;
+    width: 40px;
+    position: relative;
 
 	.badge-button__badge {
 	    display: block;
 	    position: absolute;
-	    top: 25px;
-	    right: -5px;
-	    background-color: red;
+	    bottom: -7px;
+	    right: 10px;
+	    background-color: @color5;
 	    width: 15px;
 	    height: 15px;
-	    .border-radius(5px);
-	    color: #fff;
+	    .border-radius(7px);
+	    color: @color7;
 	    font-size: 0.7em;
 	    line-height: 1.8;
 	    font-weight: bold;
