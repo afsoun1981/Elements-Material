@@ -1,13 +1,16 @@
 /// <reference path="../../typings.d.ts" />
-import { Component } from '@angular/core'; 
+import { Component, ViewEncapsulation } from '@angular/core'; 
+import { MdButton } from '@angular2-material/button';
+
 
 @Component({
 	moduleId: module.id,
 	selector: 'el-menu',
 	templateUrl: 'elMenu.html',
-	styleUrls: ['elMenu.css']
+	styleUrls: ['elMenu.css'],
+	directives: [MdButton],
+    encapsulation: ViewEncapsulation.Native
 })
-
 export class ElMenu {
 	title: string;
   	subtitle: string;
