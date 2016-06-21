@@ -1,4 +1,4 @@
-<button md-button class="badge-button" color="" (click)="buttonClicked()">
+<button md-fab class="badge-button" (click)="handleClick()">
 	<ng-content></ng-content>
-	<span class="badge-button__badge">{{badgeValue}}</span>
 </button>
+<span class="badge" [ngClass]="{'badge--top': badgePosition == BadgePositionRef.Top}">{{badgeValue}}</span>

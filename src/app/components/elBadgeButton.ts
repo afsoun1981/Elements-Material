@@ -1,6 +1,11 @@
 /// <reference path="../../typings.d.ts" />
-import { Component } from '@angular/core';
-import {MdButton} from '@angular2-material/button';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { MdButton } from '@angular2-material/button';
+
+export enum BadgePosition {
+	Top,
+	Bottom
+}
 
 @Component({
 	moduleId: module.id,
@@ -10,17 +15,56 @@ import {MdButton} from '@angular2-material/button';
 	directives: [MdButton]
 })
 export class ElBadgeButton {
-	badgeValue: number = 0;
+    private BadgePositionRef = BadgePosition;
 
-	private setBadgeValue(value : number) : void {
-		this.badgeValue = value;
-	}
+    @Input('badge-value') 
+    private badgeValueAttr: String = '0';
 
-	getBadgeValue() : number {
-		return this.badgeValue;
-	}
+    @Input('badge-position') 
+    private BadgePositionAttr: String;
 
-	buttonClicked() : void {
-		this.setBadgeValue(this.getBadgeValue() + 1);
-	}
+    @Output()
+    private elClick = new EventEmitter();
+
+    private badgeValue: number = 0;
+    private badgePosition: BadgePosition = BadgePosition.Bottom;
+
+    private ngOnInit() : void {
+        var value : number = +this.badgeValueAttr;
+        if (value != 0) {
+            this.setBadgeValue(value);
+        }
+
+    	if (this.BadgePositionAttr == 'top') {
+			this.badgePosition = BadgePosition.Top;
+		} else if (this.BadgePositionAttr == 'bottom') {
+			this.badgePosition = BadgePosition.Bottom;
+    	} else {
+			console.warn('ElBadgeButton: invalid value for badge-position!')
+    	}
+    }
+
+    private handleClick(event : Event) {
+        this.elClick.emit(event);
+    }
+
+    public getBadgeValue() : number {
+        return this.badgeValue;
+    }
+
+    public setBadgeValue(value: number): void {
+        if (value > 99) {
+            console.warn('ElBadgeButton: 3 digit values are not supported!');
+            return;
+        }
+        this.badgeValue = value;
+    }
+
+    public getBadgePosition(): BadgePosition {
+        return this.badgePosition;
+    }
+
+    public setBadgePosition(position : BadgePosition) {
+        this.badgePosition = position;
+    }
 }
