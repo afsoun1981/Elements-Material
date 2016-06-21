@@ -16,9 +16,15 @@
 		
 		<div class="toolbar__nav__flex-right">
 			<div class="toolbar__nav__flex-right__notification">
-				<button>Ta</button>
-				<button>Al</button>
-				<button>No</button>
+				<el-badge-button>
+					<md-icon>assignments</md-icon>
+				</el-badge-button>
+				<el-badge-button badge-value="12" badge-position="top" (elClick)="badgeButton1ElClicked()" #badgeButton1 >
+					<md-icon>notifications</md-icon>
+				</el-badge-button>
+				<el-badge-button>
+					<md-icon>mail</md-icon>
+				</el-badge-button>
 			</div>
 		</div>
 
