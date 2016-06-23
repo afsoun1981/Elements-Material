@@ -18,5 +18,7 @@
     "test",
     "tests"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "webcomponentsjs": "^0.7.22"
+  }
 }

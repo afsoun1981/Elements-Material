@@ -3,7 +3,8 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
-  '@angular2-material': 'vendor/@angular2-material'
+  '@angular2-material': 'vendor/@angular2-material',
+  '@vaadin': 'vendor/@vaadin'
 };
 
 /** User packages configuration. */
@@ -61,12 +62,16 @@ barrels.forEach((barrelName: string) => {
   cliSystemConfigPackages[barrelName] = { main: 'index' };
 });
 
+// Vaadin
+cliSystemConfigPackages['@vaadin/angular2-polymer'] = { main: 'index.js', defaultExtension: 'js' };
+
 /** Type declaration for ambient System. */
 declare var System: any;
 
 // Apply the CLI SystemJS configuration.
 System.config({
   map: {
+    '@vaadin': 'vendor/@vaadin',
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
     'main': 'main.js'
