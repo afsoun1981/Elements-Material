@@ -1,17 +1,29 @@
 @import "src/less/vars.less";
 @import "src/less/mixins.less";
 
-/* Header section */
+:host {
+	/* Header section */
 
-/* Body section */
-.content {
-	background-color: @color3;
-	height: 100%;
-	width: 100%;
-
-	[el-side-toolbar], el-side-toolbar {
+	/* Body section */
+	.content {
+		align-content: stretch;
+		background-color: @color3;
+		display: flex;
 		height: 100%;
-		width: 42px;
-		background-color: @color1;
+		width: 100%;
+
+		[el-side-toolbar], el-side-toolbar {
+			background-color: @color1;
+			flex: 0 0 42px;
+		}
+
+		[el-main-section], el-main-section {
+			flex: 1;
+		}
+	}
+
+	#mainGrid {
+		height: 300px;
+		width: 100%;
 	}
 }
