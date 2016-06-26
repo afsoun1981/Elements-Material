@@ -10,6 +10,14 @@ import {MdRadioButton, MdRadioGroup, MdRadioDispatcher} from '@angular2-material
 import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
 import {ElToolbar} from './components/elToolbar';
 import {ElMenu} from './components/elMenu';
+import {ElTest} from './components/elTest';
+import { PolymerElement } from '@vaadin/angular2-polymer';
+
+class Customer {
+  firstName: string;
+  lastName: string;
+  email: string;
+}
 
 @Component({
   moduleId: module.id,
@@ -27,7 +35,9 @@ import {ElMenu} from './components/elMenu';
     MdRadioButton,
     MdIcon,
     ElToolbar,
-    ElMenu
+    ElMenu,
+    ElTest,
+    PolymerElement('vaadin-grid')
   ],
   providers: [MdIconRegistry, MdRadioDispatcher]
 })
@@ -51,4 +61,14 @@ export class ElementsProtoAppComponent implements AfterViewInit {
       { title: 'Mrs.', subtitle: 'Sercha'}
     ]
   }
+
+  customers: Customer[] = [{
+    firstName: 'Afsoun',
+    lastName: 'Amiri',
+    email: 'afsoun@gmail.com'
+  }, {
+    firstName: 'Test',
+    lastName: 'User',
+    email: 'test@user.com'
+  }]
 }

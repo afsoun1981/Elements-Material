@@ -1,5 +1,5 @@
 /// <reference path="../../typings.d.ts" />
-import { Component, ViewEncapsulation, Input } from '@angular/core'; 
+import { Component, Input } from '@angular/core'; 
 import { MdButton } from '@angular2-material/button';
 
 @Component({
@@ -8,7 +8,6 @@ import { MdButton } from '@angular2-material/button';
 	templateUrl: 'elMenu.html',
 	styleUrls: ['elMenu.css'],
 	directives: [ MdButton ],
-    encapsulation: ViewEncapsulation.Native
 })
 export class ElMenu {
 	@Input() title: string;

@@ -1,0 +1,26 @@
+{
+  "name": "elements-proto",
+  "description": "Prototype for element and angular2 evalution",
+  "main": "",
+  "authors": [
+    "Afsoun Amiri <afsoun1981@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/afsoun1981/Elements-Material",
+  "moduleType": [
+    "amd"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "webcomponentsjs": "^0.7.22",
+    "paper-input": "^1.1.13",
+    "vaadin-grid": "https://github.com/vaadin/vaadin-grid.git#v1.1.0-beta5"
+  }
+}
