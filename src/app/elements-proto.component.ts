@@ -33,13 +33,4 @@ import {ElMenu} from './components/elMenu';
 })
 export class ElementsProtoAppComponent {
   title: String = 'elements-proto works!';
-
-  dogs: Object[] = [
-    {name: "Porter"},
-    {name: "Mal"},
-    {name: "Razzle"},
-    {name: "Koby"},
-    {name: "Molly"},
-    {name: "Husi"}
-  ];
 }
