@@ -9,6 +9,7 @@ import {MdCheckbox} from '@angular2-material/checkbox';
 import {MdRadioButton, MdRadioGroup, MdRadioDispatcher} from '@angular2-material/radio';
 import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
 import {ElToolbar} from './components/elToolbar';
+import {ElTest} from './components/elTest';
 
 @Component({
   moduleId: module.id,
@@ -25,7 +26,8 @@ import {ElToolbar} from './components/elToolbar';
     MdRadioGroup,
     MdRadioButton,
     MdIcon,
-    ElToolbar
+    ElToolbar,
+    ElTest
   ],
   providers: [MdIconRegistry, MdRadioDispatcher]
 })

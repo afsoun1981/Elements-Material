@@ -19,6 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "webcomponentsjs": "^0.7.22"
+    "webcomponentsjs": "^0.7.22",
+    "paper-input": "^1.1.13"
   }
 }
