@@ -1,5 +1,5 @@
-/// <reference path="../typings.d.ts" />
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+/// <reference path="../../typings.d.ts" />
+import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core';
 import {MdButton} from '@angular2-material/button';
 import {MD_SIDENAV_DIRECTIVES} from '@angular2-material/sidenav';
 import {MD_LIST_DIRECTIVES} from '@angular2-material/list';
@@ -8,9 +8,9 @@ import {MdInput} from '@angular2-material/input';
 import {MdCheckbox} from '@angular2-material/checkbox';
 import {MdRadioButton, MdRadioGroup, MdRadioDispatcher} from '@angular2-material/radio';
 import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
-import {ElToolbar} from './components/elToolbar';
-import {ElMenu} from './components/elMenu';
-import {ElTest} from './components/elTest';
+import { ElToolbarComponent } from '../el-toolbar';
+import { ElErwinComponent } from '../el-erwin';
+import { ElMenuComponent } from '../el-menu';
 import { PolymerElement } from '@vaadin/angular2-polymer';
 
 class Customer {
@@ -21,9 +21,9 @@ class Customer {
 
 @Component({
   moduleId: module.id,
-  selector: 'elements-proto-app',
-  templateUrl: 'elements-proto.component.html',
-  styleUrls: ['elements-proto.component.css'],
+  selector: 'el-proto-app',
+  templateUrl: 'el-proto-app.component.html',
+  styleUrls: ['el-proto-app.component.css'],
   directives: [
     MD_SIDENAV_DIRECTIVES,
     MD_LIST_DIRECTIVES,
@@ -34,17 +34,20 @@ class Customer {
     MdRadioGroup,
     MdRadioButton,
     MdIcon,
-    ElToolbar,
-    ElMenu,
-    ElTest,
+    ElToolbarComponent,
+    ElErwinComponent,
+    ElMenuComponent,
     PolymerElement('vaadin-grid')
   ],
   providers: [MdIconRegistry, MdRadioDispatcher]
 })
-export class ElementsProtoAppComponent implements AfterViewInit {
-  title: String = 'elements-proto works!';
+export class ElProtoAppComponent implements AfterViewInit, OnInit {
+  title: String = 'el-proto works!';
 
-  @ViewChild('testMenu') testMenu : ElMenu;
+  @ViewChild('testMenu') testMenu : ElMenuComponent;
+
+  public ngOnInit() {
+  }
 
   public ngAfterViewInit() {
     window.setTimeout(() => this._setup(), 1);
@@ -61,7 +64,7 @@ export class ElementsProtoAppComponent implements AfterViewInit {
       { title: 'Mrs.', subtitle: 'Sercha'}
     ]
   }
-
+  
   customers: Customer[] = [{
     firstName: 'Afsoun',
     lastName: 'Amiri',
@@ -70,5 +73,5 @@ export class ElementsProtoAppComponent implements AfterViewInit {
     firstName: 'Test',
     lastName: 'User',
     email: 'test@user.com'
-  }]
+  }];
 }

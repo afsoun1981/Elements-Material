@@ -4,12 +4,12 @@ import { PolymerElement } from '@vaadin/angular2-polymer';
 
 @Component({
   moduleId: module.id,
-  selector: 'el-test',
-  templateUrl: 'elTest.html',
-  styleUrls: ['elTest.css'],
+  selector: 'el-erwin',
+  templateUrl: 'el-erwin.component.html',
+  styleUrls: ['el-erwin.component.css'],
   directives: [
       PolymerElement('paper-input')
   ]
 })
-export class ElTest {
+export class ElErwinComponent {
 }

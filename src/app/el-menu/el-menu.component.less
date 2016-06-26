@@ -1,0 +1,50 @@
+@import "src/less/vars.less";
+@import "src/less/mixins.less";
+
+:host {
+    position: absolute;
+    display: block;
+    top: 220px;
+    left: 400px;
+
+    background-color: @color9;
+    border: 1px solid @color2;
+    display: block;
+    max-height: 300px;
+    padding: 5px;
+    width: 200px;
+
+    .el-menu__title {
+        background-color: beige;
+        border-bottom: 1px solid @color7;
+        font-size: 1em;
+        padding-bottom: 5px;
+    }
+
+    .el-menu__items {
+        list-style: none;
+        padding: 5px;
+        margin: 0px;
+
+        .el-menu__items__item {
+            margin: 0px;
+            padding: 5px 0 0 0;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid @color7;
+                padding-bottom: 5px;
+            }
+            
+            .el-menu__items__item__button {
+                width: 100%;
+
+                .el-menu__items__item__button__title {
+                    font-weight: bold;
+                    margin-bottom: 3px;
+                }
+
+                .el-menu__items__item__button__description {}
+            }
+        }
+    }
+}
