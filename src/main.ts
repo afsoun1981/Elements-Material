@@ -1,13 +1,15 @@
 import { HTTP_PROVIDERS } from '@angular/http'; 
 import { bootstrap } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
-import { ElementsProtoAppComponent, environment } from './app/';
+import { ElProtoAppComponent } from './app/el-proto-app';
+import { environment } from './app';
+
 
 if (environment.production) {
   enableProdMode();
 }
 
-bootstrap(ElementsProtoAppComponent, [
+bootstrap(ElProtoAppComponent, [
     HTTP_PROVIDERS
 ]);
 
