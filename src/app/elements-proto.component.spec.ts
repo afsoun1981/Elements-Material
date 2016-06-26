@@ -11,12 +11,12 @@ beforeEachProviders(() => [ElementsProtoAppComponent]);
 
 describe('App: ElementsProto', () => {
   it('should create the app',
-      inject([ElementsProtoAppComponent], (app: ElementsProtoAppComponent) => {
-    expect(app).toBeTruthy();
-  }));
+    inject([ElementsProtoAppComponent], (app: ElementsProtoAppComponent) => {
+      expect(app).toBeTruthy();
+    }));
 
   it('should have as title \'elements-proto works!\'',
-      inject([ElementsProtoAppComponent], (app: ElementsProtoAppComponent) => {
-    expect(app.title).toEqual('elements-proto works!');
-  }));
+    inject([ElementsProtoAppComponent], (app: ElementsProtoAppComponent) => {
+      expect(app.title).toEqual('elements-proto works!');
+    }));
 });

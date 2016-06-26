@@ -31,13 +31,4 @@ import {ElToolbar} from './components/elToolbar';
 })
 export class ElementsProtoAppComponent {
   title: String = 'elements-proto works!';
-
-  dogs: Object[] = [
-    {name: "Porter"},
-    {name: "Mal"},
-    {name: "Razzle"},
-    {name: "Koby"},
-    {name: "Molly"},
-    {name: "Husi"}
-  ];
 }
