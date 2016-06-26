@@ -20,6 +20,7 @@
   ],
   "dependencies": {
     "webcomponentsjs": "^0.7.22",
+    "paper-input": "^1.1.13",
     "vaadin-grid": "https://github.com/vaadin/vaadin-grid.git#v1.1.0-beta5"
   }
 }

@@ -9,6 +9,7 @@ import {MdCheckbox} from '@angular2-material/checkbox';
 import {MdRadioButton, MdRadioGroup, MdRadioDispatcher} from '@angular2-material/radio';
 import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
 import {ElToolbar} from './components/elToolbar';
+import {ElTest} from './components/elTest';
 import { PolymerElement } from '@vaadin/angular2-polymer';
 
 class Customer {
@@ -33,6 +34,7 @@ class Customer {
     MdRadioButton,
     MdIcon,
     ElToolbar,
+    ElTest,
     PolymerElement('vaadin-grid')
   ],
   providers: [MdIconRegistry, MdRadioDispatcher]
