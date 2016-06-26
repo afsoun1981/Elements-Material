@@ -1,5 +1,5 @@
 /// <reference path="../typings.d.ts" />
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import {MdButton} from '@angular2-material/button';
 import {MD_SIDENAV_DIRECTIVES} from '@angular2-material/sidenav';
 import {MD_LIST_DIRECTIVES} from '@angular2-material/list';
@@ -31,6 +31,24 @@ import {ElMenu} from './components/elMenu';
   ],
   providers: [MdIconRegistry, MdRadioDispatcher]
 })
-export class ElementsProtoAppComponent {
+export class ElementsProtoAppComponent implements AfterViewInit {
   title: String = 'elements-proto works!';
+
+  @ViewChild('testMenu') testMenu : ElMenu;
+
+  public ngAfterViewInit() {
+    window.setTimeout(() => this._setup(), 1);
+  }
+
+  private _setup() : void {
+    this.testMenu.title = "ElMenu";
+
+    this.testMenu.items = [
+      { title: 'Mr.', subtitle: 'Reza'},
+      { title: 'Mr.', subtitle: 'Majid'},
+      { title: 'Mr.', subtitle: 'Arsalan'},
+      { title: 'Mr.', subtitle: 'Telim'},
+      { title: 'Mrs.', subtitle: 'Sercha'}
+    ]
+  }
 }
