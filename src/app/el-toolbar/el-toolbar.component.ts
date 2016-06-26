@@ -2,7 +2,7 @@
 import { Component, ViewChild } from '@angular/core'; 
 import { MdToolbar } from '@angular2-material/toolbar';
 import { MdIcon, MdIconRegistry } from '@angular2-material/icon';
-import { ElBadgeButton, BadgePosition } from '../components/elBadgeButton';
+import { ElBadgeButtonComponent, BadgePosition } from '../el-badge-button';
 
 @Component({
     moduleId: module.id,
@@ -12,12 +12,12 @@ import { ElBadgeButton, BadgePosition } from '../components/elBadgeButton';
     directives: [
         MdIcon,
         MdToolbar,
-        ElBadgeButton
+        ElBadgeButtonComponent
     ],
     providers: [MdIconRegistry]
 })
 export class ElToolbarComponent {
-    @ViewChild('badgeButton1') badgeButton1 : ElBadgeButton;
+    @ViewChild('badgeButton1') badgeButton1 : ElBadgeButtonComponent;
 
     changeBadge() : void {
         this.badgeButton1.setBadgeValue(5);

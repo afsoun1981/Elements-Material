@@ -55,6 +55,7 @@ const barrels: string[] = [
   'app',
   'app/components',
   'app/el-toolbar',
+  'app/el-badge-button',
   /** @cli-barrel */
 ];
 
