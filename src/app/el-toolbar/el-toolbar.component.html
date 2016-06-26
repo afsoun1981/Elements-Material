@@ -1,0 +1,35 @@
+<md-toolbar class="toolbar">
+    <header el-header class="toolbar__header">
+        <img src="app/res/img/logo.png">
+    </header>
+
+    <nav el-header-nav class="toolbar__nav">
+        <div class="toolbar__nav__flex-left"></div>
+
+        <div class="toolbar__nav__flex-center">
+            <div class="toolbar__nav__flex-center__searchbox">
+                <input type="text">
+                <button>Sh</button>
+                <button>Bo</button>
+            </div>
+        </div>
+        
+        <div class="toolbar__nav__flex-right">
+            <div class="toolbar__nav__flex-right__notification">
+                <el-badge-button>
+                    <md-icon>assignments</md-icon>
+                </el-badge-button>
+                <el-badge-button badge-value="12" badge-position="top" (elClick)="badgeButton1ElClicked()" #badgeButton1 >
+                    <md-icon>notifications</md-icon>
+                </el-badge-button>
+                <el-badge-button>
+                    <md-icon>mail</md-icon>
+                </el-badge-button>
+            </div>
+        </div>
+
+        <div class="toolbar__menu">
+            <button>Hm</button>
+        </div>
+    </nav>
+</md-toolbar>
