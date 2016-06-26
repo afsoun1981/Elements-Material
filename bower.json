@@ -19,6 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "webcomponentsjs": "^0.7.22"
+    "webcomponentsjs": "^0.7.22",
+    "vaadin-grid": "https://github.com/vaadin/vaadin-grid.git#v1.1.0-beta5"
   }
 }
