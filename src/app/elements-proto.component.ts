@@ -9,6 +9,13 @@ import {MdCheckbox} from '@angular2-material/checkbox';
 import {MdRadioButton, MdRadioGroup, MdRadioDispatcher} from '@angular2-material/radio';
 import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
 import {ElToolbar} from './components/elToolbar';
+import { PolymerElement } from '@vaadin/angular2-polymer';
+
+class Customer {
+  firstName: string;
+  lastName: string;
+  email: string;
+}
 
 @Component({
   moduleId: module.id,
@@ -25,10 +32,21 @@ import {ElToolbar} from './components/elToolbar';
     MdRadioGroup,
     MdRadioButton,
     MdIcon,
-    ElToolbar
+    ElToolbar,
+    PolymerElement('vaadin-grid')
   ],
   providers: [MdIconRegistry, MdRadioDispatcher]
 })
 export class ElementsProtoAppComponent {
   title: String = 'elements-proto works!';
+
+  customers: Customer[] = [{
+    firstName: 'Afsoun',
+    lastName: 'Amiri',
+    email: 'afsoun@gmail.com'
+  }, {
+    firstName: 'Test',
+    lastName: 'User',
+    email: 'test@user.com'
+  }]
 }

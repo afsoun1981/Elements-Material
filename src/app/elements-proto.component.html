@@ -3,10 +3,20 @@
 
 <!-- Body section -->
 <div class="content">
-	<aside el-side-toolbar></aside>
-
-	<!--
-	<div el-column></div>
-	<div el-column></div>
-	-->
+  <aside el-side-toolbar></aside>
+  <section el-main-section>
+    <vaadin-grid id="mainGrid" selection-mode="multi" [items]="customers">
+      <table>
+        <colgroup>
+          <col name="firstName" />
+          <col name="lastName" />
+          <col name="email" />
+        </colgroup>
+      </table>
+    </vaadin-grid>
+  </section>
+  <!--
+  <div el-column></div>
+  <div el-column></div>
+  -->
 </div>
