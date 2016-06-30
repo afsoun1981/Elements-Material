@@ -1,4 +1,4 @@
-/// <reference path="../../typings.d.ts" />
+/// <reference path="../../../typings.d.ts" />
 import { Component } from '@angular/core';
 import { PolymerElement } from '@vaadin/angular2-polymer';
 

@@ -53,11 +53,11 @@ const barrels: string[] = [
 
   // App specific barrels.
   'app',
-  'app/el-proto-app',
-  'app/el-toolbar',
-  'app/el-badge-button',
-  'app/el-erwin',
-  'app/el-menu',
+  'app/components/el-proto-app',
+  'app/components/el-toolbar',
+  'app/components/el-badge-button',
+  'app/components/el-erwin',
+  'app/components/el-menu',
   /** @cli-barrel */
 ];
 

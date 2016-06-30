@@ -1,4 +1,4 @@
-/// <reference path="../../typings.d.ts" />
+/// <reference path="../../../typings.d.ts" />
 import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core';
 import {MdButton} from '@angular2-material/button';
 import {MD_SIDENAV_DIRECTIVES} from '@angular2-material/sidenav';

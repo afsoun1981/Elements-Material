@@ -1,3 +1,4 @@
+/// <reference path="../../../typings.d.ts" />
 import { Component, Input, OnInit } from '@angular/core';
 import { MdButton } from '@angular2-material/button';
 
