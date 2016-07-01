@@ -3,6 +3,7 @@ import { Component, ViewChild } from '@angular/core';
 import { MdToolbar } from '@angular2-material/toolbar';
 import { MdIcon, MdIconRegistry } from '@angular2-material/icon';
 import { ElBadgeButtonComponent, BadgePosition } from '../el-badge-button';
+import { ElDropdownButtonComponent } from '../el-dropdown-button';
 
 @Component({
     moduleId: module.id,
@@ -12,7 +13,8 @@ import { ElBadgeButtonComponent, BadgePosition } from '../el-badge-button';
     directives: [
         MdIcon,
         MdToolbar,
-        ElBadgeButtonComponent
+        ElBadgeButtonComponent,
+        ElDropdownButtonComponent
     ],
     providers: [MdIconRegistry]
 })
