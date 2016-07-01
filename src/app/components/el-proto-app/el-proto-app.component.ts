@@ -11,6 +11,8 @@ import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
 import { ElToolbarComponent } from '../el-toolbar';
 import { ElErwinComponent } from '../el-erwin';
 import { ElMenuComponent } from '../el-menu';
+import { ElSidenavButtonComponent} from '../el-sidenav-button';
+
 import { PolymerElement } from '@vaadin/angular2-polymer';
 import { Article } from '../../models/article.model';
 
@@ -32,6 +34,7 @@ import { Article } from '../../models/article.model';
     ElToolbarComponent,
     ElErwinComponent,
     ElMenuComponent,
+    ElSidenavButtonComponent,
     PolymerElement('vaadin-grid')
   ],
   providers: [MdIconRegistry, MdRadioDispatcher]
