@@ -1,4 +1,8 @@
-<button class="dropdown-btn">
-	<ng-content></ng-content>
+<button class="dropdown-btn" (click)="clicked()" (blur)="blurred()">
+	<ng-content select="md-icon"></ng-content>
 </button>
-<span class="caret"></span>
+<div class="dropdown-menu" [class.dropdown-menu--open]="showMenu" >
+    <span class="dropdown-menu__caret"></span>
+    <el-menu class="el-menu--floating el-menu--button-dropdown" #dropDownMenu (menuClick)="menuClicked($event)"></el-menu>
+</div>
+<ng-content></ng-content>
