@@ -47,11 +47,16 @@ export class ElProtoAppComponent implements OnInit {
   title: String = 'el-proto works!';
 
   constructor(dataService : DataService) {
-    this.articles = dataService.getArticles();
+    dataService.getArticles()
+                     .subscribe(
+                       articles => this.articles = articles,
+                       error =>  this.errorMessage = <any>error);
   }
 
   public ngOnInit() {
   }
 
   articles: Article[];
+
+  errorMessage: string;
 }
