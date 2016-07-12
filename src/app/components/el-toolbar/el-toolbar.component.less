@@ -34,10 +34,17 @@
             text-align: center;
 
             /* TODO: remove after debugging */
-            outline: 1px dashed red;
+            /* outline: 1px dashed red; */
 
             .toolbar__nav__flex-center__searchbox {
                 display: inline-block;
+
+                .toolbar__nav__flex-center__searchbox__input {
+                    height: 28px;
+                    border: 5px solid lighten(@color8, 10%);
+                    width: 220px;
+                    display: inline-block;
+                }
             }
         }
 

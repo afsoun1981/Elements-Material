@@ -60,6 +60,7 @@ const barrels: string[] = [
   'app/components/el-erwin-searchresult',
   'app/components/el-menu',
   'app/components/el-dropdown-button',
+  'app/components/el-sidenav-button',
   /** @cli-barrel */
 ];
 

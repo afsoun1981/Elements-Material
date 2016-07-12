@@ -13,7 +13,7 @@ import { ElErwinComponent } from '../el-erwin';
 import { ElErwinSearchresultComponent } from '../el-erwin-searchresult';
 import { ElMenuComponent } from '../el-menu';
 import { ElDropdownButtonComponent } from '../el-dropdown-button';
-
+import { ElSidenavButtonComponent} from '../el-sidenav-button';
 import { PolymerElement } from '@vaadin/angular2-polymer';
 import { Article } from '../../models/article.model';
 
@@ -37,6 +37,7 @@ import { Article } from '../../models/article.model';
     ElErwinSearchresultComponent,
     ElMenuComponent,
     ElDropdownButtonComponent,
+    ElSidenavButtonComponent,
     PolymerElement('vaadin-grid')
   ],
   providers: [MdIconRegistry, MdRadioDispatcher]
