@@ -1,2 +1,2 @@
-Elements Proto App (v0.0.2)
+Elements Proto App (v0.0.3-SNAPSHOT)
 ================
