@@ -2,13 +2,21 @@
 @import "src/less/mixins.less";
 
 :host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
     /* Header section */
+    .toolbar {
+        flex: 0 0 64px;
+    }
 
     /* Body section */
     .content {
         align-content: stretch;
         background-color: @color3;
         display: flex;
+        flex: 1;
         height: 100%;
         width: 100%;
 
@@ -31,7 +39,7 @@
     }
 
     #mainGrid {
-        height: 300px;
+        height: 100%;
         width: 100%;
     }
 }
