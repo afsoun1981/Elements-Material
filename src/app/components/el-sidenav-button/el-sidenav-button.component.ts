@@ -1,5 +1,5 @@
 /// <reference path="../../../typings.d.ts" />
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MdButton } from '@angular2-material/button';
 
 @Component({
@@ -9,12 +9,8 @@ import { MdButton } from '@angular2-material/button';
   styleUrls: ['el-sidenav-button.component.css'],
   directives: [MdButton]
 })
-export class ElSidenavButtonComponent implements OnInit {
+export class ElSidenavButtonComponent {
 
   constructor() {}
-
-  ngOnInit() {
-  	console.log("test");
-  }
 
 }
