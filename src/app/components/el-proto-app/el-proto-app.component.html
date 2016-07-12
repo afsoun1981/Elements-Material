@@ -5,9 +5,12 @@
 <div class="content">
   <aside el-side-toolbar></aside>
 
-  <el-erwin class="test-element1"></el-erwin>
+  <el-erwin-searchresult class="test-element1"></el-erwin-searchresult>
 
-  <el-erwin class="test-element2"></el-erwin>
+  <el-erwin caption="Test" class="test-element2">
+    <paper-input label="Firstname"></paper-input>
+    <paper-input label="Lastname"></paper-input>
+  </el-erwin>
 
   <section el-main-section>
     <vaadin-grid id="mainGrid" selection-mode="multi" [items]="articles">

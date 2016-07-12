@@ -9,10 +9,11 @@
         <div class="toolbar__nav__flex-center">
             <div class="toolbar__nav__flex-center__searchbox">
                 <input type="text">
-                <el-dropdown-button>
+
+                <el-dropdown-button (menuClick)="dropDownBtn1MenuClicked($event)" #dropDownBtn1>
                     <md-icon>note_add</md-icon>
                 </el-dropdown-button>
-                <el-dropdown-button>
+                <el-dropdown-button (menuClick)="dropDownBtn2MenuClicked($event)" #dropDownBtn2>
                     <md-icon>loyalty</md-icon>
                 </el-dropdown-button>
             </div>
