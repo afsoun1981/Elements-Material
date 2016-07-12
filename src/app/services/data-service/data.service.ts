@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Article } from '../models/article.model';
+import { Article } from '../../models/article.model';
 
 @Injectable()
 export class DataService {

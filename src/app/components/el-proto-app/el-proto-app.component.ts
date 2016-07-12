@@ -16,7 +16,7 @@ import { ElDropdownButtonComponent } from '../el-dropdown-button';
 import { ElSidenavButtonComponent} from '../el-sidenav-button';
 import { PolymerElement } from '@vaadin/angular2-polymer';
 import { Article } from '../../models/article.model';
-import { DataService } from '../../services/data.service';
+import { DataService } from '../../services/data-service/data.service';
 
 @Component({
   moduleId: module.id,
