@@ -1,5 +1,5 @@
 /// <reference path="../../../typings.d.ts" />
-import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import {MdButton} from '@angular2-material/button';
 import {MD_SIDENAV_DIRECTIVES} from '@angular2-material/sidenav';
 import {MD_LIST_DIRECTIVES} from '@angular2-material/list';
@@ -10,7 +10,10 @@ import {MdRadioButton, MdRadioGroup, MdRadioDispatcher} from '@angular2-material
 import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
 import { ElToolbarComponent } from '../el-toolbar';
 import { ElErwinComponent } from '../el-erwin';
+import { ElErwinSearchresultComponent } from '../el-erwin-searchresult';
 import { ElMenuComponent } from '../el-menu';
+import { ElDropdownButtonComponent } from '../el-dropdown-button';
+
 import { PolymerElement } from '@vaadin/angular2-polymer';
 import { Article } from '../../models/article.model';
 
@@ -31,33 +34,17 @@ import { Article } from '../../models/article.model';
     MdIcon,
     ElToolbarComponent,
     ElErwinComponent,
+    ElErwinSearchresultComponent,
     ElMenuComponent,
+    ElDropdownButtonComponent,
     PolymerElement('vaadin-grid')
   ],
   providers: [MdIconRegistry, MdRadioDispatcher]
 })
-export class ElProtoAppComponent implements AfterViewInit, OnInit {
+export class ElProtoAppComponent implements OnInit {
   title: String = 'el-proto works!';
 
-  @ViewChild('testMenu') testMenu : ElMenuComponent;
-
   public ngOnInit() {
-  }
-
-  public ngAfterViewInit() {
-    window.setTimeout(() => this._setup(), 1);
-  }
-
-  private _setup() : void {
-    this.testMenu.title = "ElMenu";
-
-    this.testMenu.items = [
-      { title: 'Mr.', subtitle: 'Reza'},
-      { title: 'Mr.', subtitle: 'Majid'},
-      { title: 'Mr.', subtitle: 'Arsalan'},
-      { title: 'Mr.', subtitle: 'Telim'},
-      { title: 'Mrs.', subtitle: 'Sercha'}
-    ]
   }
   
   articles: Article[] = [{

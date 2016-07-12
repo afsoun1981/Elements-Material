@@ -1,0 +1,56 @@
+@import "src/less/vars.less";
+@import "src/less/mixins.less";
+
+:host {
+	display: inline-block;
+	height: 40px;
+	position: relative;
+	vertical-align: middle;
+
+	.dropdown-btn {
+		background-color: @color6;
+		border: 0px;
+		height: 40px;
+	    width: 40px;
+	    text-align: center;
+	    padding: 0px;
+	    margin: 1px 2px;
+	}
+
+	md-icon {
+		color: white;
+		font-size: 38px;
+		height: auto;
+		width: auto;
+	}
+
+	.dropdown-menu {
+		display: none;
+
+		.dropdown-menu__caret {
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 5px 7px 0 7px;
+			border-color: @color6 transparent transparent transparent;
+			position: absolute;
+	    	top: 100%;
+	    	left: 15px;
+	    	margin-top: 5px;
+		}
+
+		el-menu {
+			top: 100%;
+		    margin-top: 12px;
+			/* TODO: define z-index layers standard values */
+			z-index: 10;
+
+			.border-radius(2px);
+			.box-shadow(-1px 2px 8px 0px rgba(0,0,0,0.75));
+		}
+
+		&.dropdown-menu--open {
+			display: block;
+		}
+	}
+}
