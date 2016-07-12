@@ -1,50 +1,115 @@
 @import "src/less/vars.less";
 @import "src/less/mixins.less";
 
-:host {
-    position: absolute;
-    display: block;
-    top: 220px;
-    left: 400px;
+/*
+  Generates a custom el-menu style
 
-    background-color: @color9;
-    border: 1px solid @color2;
-    display: block;
-    max-height: 300px;
-    padding: 5px;
-    width: 200px;
+  params:
 
-    .el-menu__title {
+  - name(text): name of custom style
+  - width(px): width of the component (default: 200px)
+*/
+.el-menu(
+  @name, 
+  @width:200px) {
+
+  :host {
+    &.el-menu--@{name}  {
+      background-color: @color9;
+      border: 1px solid @color2;
+      padding: 5px;
+      width: @width;
+
+      .el-menu__title {
+        color: @color1;
         background-color: beige;
         border-bottom: 1px solid @color7;
-        font-size: 1em;
+      }
+
+      .el-menu__items {
+        padding: 5px;
+
+        .el-menu__items__item {
+          padding: 5px 0 0 0;
+
+          &:not(:last-child) {
+            padding-bottom: 5px;
+          }
+          
+          .el-menu__items__item__button {
+            .el-menu__items__item__button__title {
+            }
+
+            .el-menu__items__item__button__subtitle {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+:host {
+    display: block;
+    background-color: @white;
+
+    .el-menu__title {
+        background-color: @color1;
+        border-bottom: 1px solid @color7;
+        color: @white;
+        font-size: 0.6em;
+        font-weight: bold;
+        padding-top: 2px;
         padding-bottom: 5px;
+        text-align: center;
     }
 
     .el-menu__items {
         list-style: none;
-        padding: 5px;
-        margin: 0px;
+        overflow-y: scroll;
 
         .el-menu__items__item {
-            margin: 0px;
-            padding: 5px 0 0 0;
-
             &:not(:last-child) {
                 border-bottom: 1px solid @color7;
-                padding-bottom: 5px;
             }
             
             .el-menu__items__item__button {
+                padding: 0 5px;
                 width: 100%;
 
+                md-icon {
+                    color: #000;
+                    float: left;
+                    font-size: 28px;
+                    line-height: 1.3;
+                    padding-right: 5px;
+                }
+
                 .el-menu__items__item__button__title {
+                    float: left;
                     font-weight: bold;
                     margin-bottom: 3px;
                 }
 
-                .el-menu__items__item__button__description {}
+                .el-menu__items__item__button__subtitle {
+                    float: right;
+                    font-size: 0.7em;
+                }
             }
         }
     }
+
+    &.el-menu--floating {
+        position: absolute;
+        width: 200px;
+
+        .el-menu__items {
+            max-height: 300px;
+        }
+    }
 }
+
+.el-menu(inline, auto);
+
+.el-menu(button-dropdown, 200px);
