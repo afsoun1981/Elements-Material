@@ -34,12 +34,22 @@
         }
 
         [el-main-section], el-main-section {
-            flex: 1;
+            //flex: 1;
         }
     }
 
     #mainGrid {
         height: 100%;
         width: 100%;
+    }
+
+    paper-menu, paper-listbox { border: 1px solid;}
+    paper-menu { 
+        --paper-menu-background-color: @color9;
+        --paper-menu-color: @white;
+    }
+
+    vaadin-combo-box-overlay {
+        --vaadin-combo-box-overlay-max-height: 100%;
     }
 }

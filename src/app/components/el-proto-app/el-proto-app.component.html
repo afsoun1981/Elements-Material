@@ -30,51 +30,78 @@
     </el-sidenav-button>
   </aside>
 
-  <el-erwin-searchresult class="test-element1"></el-erwin-searchresult>
+      <paper-drawer-panel rightDrawer="true" >
+      <div drawer> Drawer panel... </div>
+      <div main> Main panel... </div>
+    </paper-drawer-panel>
+
+  <el-erwin-searchresult class="test-element1">
+    <paper-item>
+      <md-icon>extension</md-icon>
+      Item 1
+    </paper-item>
+    <paper-item>
+      <md-icon>storage</md-icon>
+      Item 2
+    </paper-item>
+  </el-erwin-searchresult>
 
   <el-erwin caption="Test" class="test-element2">
-    <paper-input label="Firstname"></paper-input>
-    <paper-input label="Lastname"></paper-input>
+    <paper-button label="Lastname" paper-drawer-toggle>test button</paper-button>
   </el-erwin>
 
   <section el-main-section>
-    <vaadin-grid id="mainGrid" selection-mode="multi" [items]="articles">
-      <table>
-        <colgroup>
-          <col name="artikel_nr" />
-          <col name="bezeichnung" />
-          <col name="h_article_nr" />
-          <col name="bestell_nr" />
-          <col name="ek_netto" />
-          <col name="rabatt" />
-          <col name="shop_vk" />
-          <col name="ebay_vk" />
-          <col name="amazon_vk" />
-          <col name="kapazitat" />
-          <col name="farbe" />
-          <col name="gewicht" />
-          <col name="hersteller" />
-          <col name="status" />
-        </colgroup>
-        <thead>
-          <tr>              
-             <th>Artikel-Nr.</th>
-             <th>Bezeichnung</th>
-             <th>H-Artikel-Nr.</th>
-             <th>Bestell-Nr.</th>
-             <th>EK netto</th>
-             <th>Rabatt</th>
-             <th>Shop VK</th>
-             <th>eBay VK</th>
-             <th>Amazon VK</th>
-             <th>Kapatzitäat</th>
-             <th>Farbe</th>
-             <th>Gewicht</th>
-             <th>Hersteller</th>
-             <th>Status</th>
-          </tr>
-        </thead>
-      </table>
-    </vaadin-grid>    
+    <vaadin-combo-box [label]="myLabel" [(value)]="myValue" [items]="myItems">
+      <paper-icon-button icon="remove-circle" class="clear-button"></paper-icon-button>
+      <paper-icon-button icon="arrow-drop-down" class="toggle-button rotate-on-open"></paper-icon-button>
+    </vaadin-combo-box>
+
+    <paper-listbox selected="0">
+      <paper-item>
+        <md-icon>extension</md-icon>
+        Item 1
+      </paper-item>
+      <paper-item>
+        <md-icon>storage</md-icon>
+        Item 2
+      </paper-item>
+    </paper-listbox> 
+
+    <paper-dropdown-menu label="Dinosaurs (light)">
+      <paper-listbox class="dropdown-content" selected="1">
+        <paper-item>allosaurus</paper-item>
+        <paper-item>brontosaurus</paper-item>
+        <paper-item>carcharodontosaurus</paper-item>
+        <paper-item>diplodocus</paper-item>
+      </paper-listbox>
+    </paper-dropdown-menu>
+
+    <paper-icon-button icon="find-in-page"></paper-icon-button>
+
+    <paper-menu>
+      <paper-submenu>
+        <paper-item class="menu-trigger">Topics</paper-item>
+        <paper-menu class="menu-content">
+          <paper-item>Topic 1</paper-item>
+          <paper-item>Topic 2</paper-item>
+          <paper-item>Topic 3</paper-item>
+        </paper-menu>
+      </paper-submenu>
+      <paper-submenu>
+        <paper-item class="menu-trigger">Faves</paper-item>
+        <paper-menu class="menu-content">
+          <paper-item>Fave 1</paper-item>
+          <paper-item>Fave 2</paper-item>
+        </paper-menu>
+      </paper-submenu>
+      <paper-submenu disabled>
+        <paper-item class="menu-trigger">Unavailable</paper-item>
+        <paper-menu class="menu-content">
+          <paper-item>Disabled 1</paper-item>
+          <paper-item>Disabled 2</paper-item>
+        </paper-menu>
+      </paper-submenu>
+    </paper-menu>
+
   </section>
 </div>

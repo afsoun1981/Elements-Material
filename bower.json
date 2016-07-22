@@ -22,6 +22,11 @@
   "dependencies": {
     "webcomponentsjs": "^0.7.22",
     "paper-input": "^1.1.13",
-    "vaadin-grid": "https://github.com/vaadin/vaadin-grid.git#v1.1.0-beta5"
+    "vaadin-grid": "https://github.com/vaadin/vaadin-grid.git#v1.1.0-beta5",
+    "paper-listbox": "polymerelements/paper-listbox#^1.1.2",
+    "paper-item": "PolymerElements/paper-item#^1.2.1",
+    "paper-dropdown-menu": "PolymerElements/paper-dropdown-menu#^1.3.2",
+    "paper-menu": "PolymerElements/paper-menu#^1.2.2",
+    "paper-drawer-panel": "PolymerElements/paper-drawer-panel#^1.0.9"
   }
 }

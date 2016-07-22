@@ -6,6 +6,7 @@ import { ElBadgeButtonComponent, BadgePosition } from '../el-badge-button';
 import { ElDropdownButtonComponent } from '../el-dropdown-button';
 import { MenuClickEvent } from '../el-menu';
 
+
 @Component({
     moduleId: module.id,
     selector: 'el-toolbar',

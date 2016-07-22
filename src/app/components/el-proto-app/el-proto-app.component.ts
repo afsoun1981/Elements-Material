@@ -39,12 +39,23 @@ import { DataService } from '../../services/data-service/data.service';
     ElMenuComponent,
     ElDropdownButtonComponent,
     ElSidenavButtonComponent,
-    PolymerElement('vaadin-grid')
+    PolymerElement('vaadin-grid'),
+    PolymerElement('paper-button'),
+    PolymerElement('vaadin-combo-box'),
+    PolymerElement('paper-item'),
+    PolymerElement('paper-listbox'),
+    PolymerElement('paper-dropdown-menu'),
+    PolymerElement('paper-menu'),
+    PolymerElement('paper-submenu'),
+    PolymerElement('paper-drawer-panel')    
   ],
   providers: [DataService, MdIconRegistry, MdRadioDispatcher]
 })
 export class ElProtoAppComponent implements OnInit {
   title: String = 'el-proto works!';
+  myItems = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  myValue = '4';
+  myLabel='Select a number';
 
   constructor(dataService : DataService) {
     dataService.getArticles()
