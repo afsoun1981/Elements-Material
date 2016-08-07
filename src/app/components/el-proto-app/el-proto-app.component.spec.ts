@@ -2,6 +2,7 @@
 
 import { By }           from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
+import { DataService } from '../../services/data-service/data.service';
 
 import {
   beforeEach, beforeEachProviders,
@@ -13,8 +14,8 @@ import {
 import { ElProtoAppComponent } from './el-proto-app.component';
 
 describe('Component: ElProtoApp', () => {
-  it('should create an instance', () => {
-    let component = new ElProtoAppComponent();
+  it('should create an instance', (dataService: DataService) => {
+    let component = new ElProtoAppComponent(dataService);
     expect(component).toBeTruthy();
   });
 });
