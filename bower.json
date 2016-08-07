@@ -1,6 +1,6 @@
 {
   "name": "elements-proto",
-  "version": "0.1.0-SNAPSHOT",
+  "version": "0.1.0",
   "description": "Prototype for element and angular2 evalution",
   "main": "",
   "authors": [
