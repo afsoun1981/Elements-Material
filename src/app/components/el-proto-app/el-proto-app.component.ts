@@ -18,6 +18,10 @@ import { PolymerElement } from '@vaadin/angular2-polymer';
 import { Article } from '../../models/article.model';
 import { DataService } from '../../services/data-service/data.service';
 
+import { Subscriber } from 'rxjs/Subscriber';
+import { RepositoryEvent, RepositoryEventType } from '../../services/repository/repository';
+import { ArticleRepositoryService } from '../../services/article-repository/article-repository.service';
+
 @Component({
   moduleId: module.id,
   selector: 'el-proto-app',
@@ -41,16 +45,34 @@ import { DataService } from '../../services/data-service/data.service';
     ElSidenavButtonComponent,
     PolymerElement('vaadin-grid')
   ],
-  providers: [DataService, MdIconRegistry, MdRadioDispatcher]
+  providers: [DataService, ArticleRepositoryService, MdIconRegistry, MdRadioDispatcher]
 })
 export class ElProtoAppComponent implements OnInit {
   title: String = 'el-proto works!';
 
-  constructor(dataService : DataService) {
-    dataService.getArticles()
-                     .subscribe(
-                       articles => this.articles = articles,
-                       error =>  this.errorMessage = <any>error);
+  constructor(articleRepo : ArticleRepositoryService) {
+    var me = this;
+
+    articleRepo.subscribe(function(event : RepositoryEvent) {
+        let subscriber : Subscriber<RepositoryEvent> = this;
+        switch (event.type) {
+          case RepositoryEventType.Add:
+            console.log('New article added: ' + event.value.artikel_nr); 
+            break;
+          
+          case RepositoryEventType.Reload:
+            console.log(event.value + ' articles loaded.'); 
+            me.articles = articleRepo.getModels();
+            break;
+
+          default:
+            subscriber.unsubscribe();
+            subscriber.error("Invalid value.");
+            break;
+        }
+    });
+
+    setTimeout(() => articleRepo.addModel(this.articles[0]), 2000);
   }
 
   public ngOnInit() {
@@ -58,5 +80,4 @@ export class ElProtoAppComponent implements OnInit {
 
   articles: Article[];
 
-  errorMessage: string;
 }
