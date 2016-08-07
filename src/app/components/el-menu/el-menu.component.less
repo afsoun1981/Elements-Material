@@ -7,17 +7,28 @@
   params:
 
   - name(text): name of custom style
+  - color(color): menu elements font color(default: black)
   - width(px): width of the component (default: 200px)
+  - padding(px): padding for main element (default: 5px)
+  - border-size(px): size of the outer border (default: 1px)
+  - item-padding(px): padding for menu items (default: 5px)
+  - background-color(color): background color of element (default: @color9)
 */
 .el-menu(
   @name, 
-  @width:200px) {
+  @color: black,
+  @width:200px,
+  @padding:5px,
+  @border-size: 1px,
+  @item-padding: 5px,
+  @background-color: @color9) {
 
   :host {
     &.el-menu--@{name}  {
-      background-color: @color9;
-      border: 1px solid @color2;
-      padding: 5px;
+      background-color: @background-color;
+      border: @border-size solid @color2;
+      color: @color;
+      padding: @padding;
       width: @width;
 
       .el-menu__title {
@@ -27,7 +38,7 @@
       }
 
       .el-menu__items {
-        padding: 5px;
+        padding: @item-padding;
 
         .el-menu__items__item {
           padding: 5px 0 0 0;
@@ -110,6 +121,10 @@
     }
 }
 
-.el-menu(inline, auto);
+.el-menu(inline, 
+  @background-color:transparent, 
+  @border-size: 0,
+  @item-padding:0px);
 
-.el-menu(button-dropdown, 200px);
+.el-menu(button-dropdown, 
+  @width:200px);
