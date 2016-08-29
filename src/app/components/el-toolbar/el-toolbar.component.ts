@@ -49,33 +49,33 @@ export class ElToolbarComponent implements AfterViewInit {
         this.dropDownBtn1.setMenuTitle("ElMenu");
 
         this.dropDownBtn1.setMenuItems([
-          { icon: null, title: 'Sofortauftrag', subtitle: "Ctrl+S"},
-          { icon: "note", title: 'Auftragsbestätigung', subtitle: null},
-          { icon: "note", title: 'Lieferschein', subtitle: null},
-          { icon: "note", title: 'Rücklieferschein', subtitle: null},
-          { icon: "note", title: 'Rechnung', subtitle: null},
-          { icon: "note", title: 'Sofortrechnung', subtitle: null},
-          { icon: "note", title: 'Direktrechnung', subtitle: null},
-          { icon: "note", title: 'Gutschrift', subtitle: null},
-          { icon: "note", title: 'Stornorechnung', subtitle: null},
-          { icon: "note", title: 'Sofortstornorechnung', subtitle: null},
-          { icon: "note", title: 'Nachlieferung', subtitle: null},
-          { icon: "note", title: 'Angebot', subtitle: null}
+          { iconpre: null, title: 'Sofortauftrag', iconpost: "Ctrl+S"},
+          { iconpre: "note", title: 'Auftragsbestätigung', iconpost: null},
+          { iconpre: "note", title: 'Lieferschein', iconpost: null},
+          { iconpre: "note", title: 'Rücklieferschein', iconpost: null},
+          { iconpre: "note", title: 'Rechnung', iconpost: null},
+          { iconpre: "note", title: 'Sofortrechnung', iconpost: null},
+          { iconpre: "note", title: 'Direktrechnung', iconpost: null},
+          { iconpre: "note", title: 'Gutschrift', iconpost: null},
+          { iconpre: "note", title: 'Stornorechnung', iconpost: null},
+          { iconpre: "note", title: 'Sofortstornorechnung', iconpost: null},
+          { iconpre: "note", title: 'Nachlieferung', iconpost: null},
+          { iconpre: "note", title: 'Angebot', iconpost: null}
         ]);
 
         this.dropDownBtn2.setMenuItems([
-          { icon: null, title: 'Sofortauftrag', subtitle: "Ctrl+S"},
-          { icon: "note", title: 'Auftragsbestätigung', subtitle: null},
-          { icon: "note", title: 'Lieferschein', subtitle: null},
-          { icon: "note", title: 'Rücklieferschein', subtitle: null},
-          { icon: "note", title: 'Rechnung', subtitle: null},
-          { icon: "note", title: 'Sofortrechnung', subtitle: null},
-          { icon: "note", title: 'Direktrechnung', subtitle: null},
-          { icon: "note", title: 'Gutschrift', subtitle: null},
-          { icon: "note", title: 'Stornorechnung', subtitle: null},
-          { icon: "note", title: 'Sofortstornorechnung', subtitle: null},
-          { icon: "note", title: 'Nachlieferung', subtitle: null},
-          { icon: "note", title: 'Angebot', subtitle: null}
+          { iconpre: null, title: 'Sofortauftrag', iconpost: "Ctrl+S"},
+          { iconpre: "note", title: 'Auftragsbestätigung', iconpost: null},
+          { iconpre: "note", title: 'Lieferschein', iconpost: null},
+          { iconpre: "note", title: 'Rücklieferschein', iconpost: null},
+          { iconpre: "note", title: 'Rechnung', iconpost: null},
+          { iconpre: "note", title: 'Sofortrechnung', iconpost: null},
+          { iconpre: "note", title: 'Direktrechnung', iconpost: null},
+          { iconpre: "note", title: 'Gutschrift', iconpost: null},
+          { iconpre: "note", title: 'Stornorechnung', iconpost: null},
+          { iconpre: "note", title: 'Sofortstornorechnung', iconpost: null},
+          { iconpre: "note", title: 'Nachlieferung', iconpost: null},
+          { iconpre: "note", title: 'Angebot', iconpost: null}
         ]);
     }
 }
