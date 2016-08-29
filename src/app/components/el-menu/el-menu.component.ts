@@ -4,9 +4,9 @@ import { MdButton } from '@angular2-material/button';
 import { MdIcon } from '@angular2-material/icon';
 
 export class MenuItem {
-  icon: string;
+  iconpre: string;
   title: string;
-  subtitle: string;
+  iconpost: string;
 }
 
 export class MenuClickEvent {
