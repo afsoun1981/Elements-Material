@@ -9,16 +9,16 @@ export class DataService {
   constructor(private http : Http) {
   }
 
-  public getArticles() : Observable<Article[]> {
-      var articles : Article[] = [];
+  public get<T>(url : string) : Observable<T[]> {
+      var models : T[] = [];
 
       // TODO: get data from API server
-      return this.http.get("data/articles.json")
+      return this.http.get(url)
                   .map(this.extractData)
                   .catch(this.handleError);
   }
 
-  private extractData(res: Response) : Article[] {
+  private extractData<T>(res: Response) : T[] {
     let body = res.json();
     return body.results || [];
   }

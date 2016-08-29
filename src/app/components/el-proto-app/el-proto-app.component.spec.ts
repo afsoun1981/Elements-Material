@@ -2,8 +2,7 @@
 
 import { By }           from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
-//import { DataService } from '../../services/data-service/data.service';
-
+import { DataService } from '../../services/data-service/data.service';
 import {
   beforeEach, beforeEachProviders,
   describe, xdescribe,
