@@ -26,11 +26,11 @@ export class ElErwinSearchresultComponent implements AfterViewInit {
     this.menu1.title = "Bezeichnung";
 
     this.menu1.items = [
-      { iconpre: "", title: "Artikel1", iconpost: "chevron_right"},
-      { iconpre: "", title: "Artikel2", iconpost: "chevron_right"},
-      { iconpre: "", title: "Artikel3", iconpost: "chevron_right"},
-      { iconpre: "", title: "Artikel4", iconpost: "chevron_right"},
-      { iconpre: "", title: "Artikel5", iconpost: "chevron_right"}
+      { iconpre: null, title: "Artikel1", iconpost: "chevron_right"},
+      { iconpre: null, title: "Artikel2", iconpost: "chevron_right"},
+      { iconpre: null, title: "Artikel3", iconpost: "chevron_right"},
+      { iconpre: null, title: "Artikel4", iconpost: "chevron_right"},
+      { iconpre: null, title: "Artikel5", iconpost: "chevron_right"}
     ];
   }
 }
