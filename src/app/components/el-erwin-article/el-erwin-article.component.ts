@@ -14,7 +14,7 @@ import { ElMenuComponent } from "../el-menu";
 })
 export class ElErwinArticleComponent implements AfterViewInit {
 	@ViewChild("erwin") erwin : ElErwinComponent;
-  @ViewChild("menu1") menu1 : ElMenuComponent;	
+  @ViewChild("menu2") menu2 : ElMenuComponent;	
 
   constructor() {}
 
@@ -23,9 +23,9 @@ export class ElErwinArticleComponent implements AfterViewInit {
   }
 
     private _setup() : void {
-    this.menu1.title = "Artikel";
+    this.menu2.title = null;
 
-    this.menu1.items = [
+    this.menu2.items = [
       { iconpre: "reorder", title: "Stammdaten", iconpost: "chevron_right"},
       { iconpre: "shopping_basket", title: "Beschaffung", iconpost: "chevron_right"},
       { iconpre: "reorder", title: "VK-Preise", iconpost: "chevron_right"},
