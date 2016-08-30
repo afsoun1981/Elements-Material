@@ -11,6 +11,7 @@ import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
 import { ElToolbarComponent } from '../el-toolbar';
 import { ElErwinComponent } from '../el-erwin';
 import { ElErwinSearchresultComponent } from '../el-erwin-searchresult';
+import { ElErwinArticleComponent } from '../el-erwin-article';
 import { ElMenuComponent } from '../el-menu';
 import { ElDropdownButtonComponent } from '../el-dropdown-button';
 import { ElSidenavButtonComponent} from '../el-sidenav-button';
@@ -40,6 +41,7 @@ import { ArticleRepositoryService } from '../../services/article-repository/arti
     ElToolbarComponent,
     ElErwinComponent,
     ElErwinSearchresultComponent,
+    ElErwinArticleComponent,
     ElMenuComponent,
     ElDropdownButtonComponent,
     ElSidenavButtonComponent,
