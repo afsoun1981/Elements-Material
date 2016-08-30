@@ -15,6 +15,8 @@ import { ElMenuComponent } from "../el-menu";
 export class ElErwinChannelsComponent implements AfterViewInit {
 	@ViewChild("erwin3") erwin3 : ElErwinComponent;
   @ViewChild("menu3") menu3 : ElMenuComponent;
+  @ViewChild("menu4") menu4 : ElMenuComponent;
+  @ViewChild("menu5") menu5 : ElMenuComponent;
 
   constructor() {}
 
@@ -23,15 +25,24 @@ export class ElErwinChannelsComponent implements AfterViewInit {
   }
 
   private _setup() : void {
-    this.menu3.title = null;
+    this.menu3.title = "amazon";
+    this.menu4.title = "ebay";
+    this.menu5.title = "Shopsystem";
 
     this.menu3.items = [
-      { iconpre: null, title: "Artikel1", iconpost: "chevron_right"},
-      { iconpre: null, title: "Artikel2", iconpost: "chevron_right"},
-      { iconpre: null, title: "Artikel3", iconpost: "chevron_right"},
-      { iconpre: null, title: "Artikel4", iconpost: "chevron_right"},
-      { iconpre: null, title: "Artikel5", iconpost: "chevron_right"}
+      { iconpre: null, title: "amazon.de", iconpost: "chevron_right"},
+      { iconpre: null, title: "amazon.co.uk", iconpost: "chevron_right"}      
+    ];
+
+    this.menu4.items = [
+      { iconpre: null, title: "ebay.de", iconpost: "chevron_right"},
+      { iconpre: null, title: "ebay.fr", iconpost: "chevron_right"},
+      { iconpre: null, title: "ebay.co.uk", iconpost: "chevron_right"}            
+    ];
+
+    this.menu5.items = [
+      { iconpre: null, title: "www.meinshop.de", iconpost: "chevron_right"},
+      { iconpre: null, title: "www.meinanderershop.de", iconpost: "chevron_right"}      
     ];
   }
-
 }
