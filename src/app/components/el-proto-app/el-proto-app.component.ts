@@ -14,6 +14,8 @@ import { ElErwinSearchresultComponent } from '../el-erwin-searchresult';
 import { ElErwinArticleComponent } from '../el-erwin-article';
 import { ElErwinChannelsComponent } from '../el-erwin-channels';
 import { ElErwinChannelArticleComponent } from '../el-erwin-channel-article';
+import { ElErwinChannelParameterComponent } from '../el-erwin-channel-parameter';
+
 import { ElMenuComponent } from '../el-menu';
 import { ElDropdownButtonComponent } from '../el-dropdown-button';
 import { ElSidenavButtonComponent} from '../el-sidenav-button';
@@ -46,6 +48,7 @@ import { ArticleRepositoryService } from '../../services/article-repository/arti
     ElErwinArticleComponent,
     ElErwinChannelsComponent,
     ElErwinChannelArticleComponent,
+    ElErwinChannelParameterComponent,
     ElMenuComponent,
     ElDropdownButtonComponent,
     ElSidenavButtonComponent,
