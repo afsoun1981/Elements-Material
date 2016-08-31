@@ -65,6 +65,7 @@ const barrels: string[] = [
   'app/components/el-erwin-channels',
   'app/components/el-erwin-channel-article',
   'app/components/el-erwin-channel-parameter',
+  'app/components/el-erwin-channel-articleinfo',
   /** @cli-barrel */
 ];
 
