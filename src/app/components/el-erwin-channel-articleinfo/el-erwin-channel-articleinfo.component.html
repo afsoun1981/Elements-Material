@@ -1,3 +1,16 @@
-<p>
-  el-erwin-channel-articleinfo works!
-</p>
+<el-erwin class="erwin" caption="Artikeldaten" #erwin7 >
+	<paper-input label="Title" placeholder="16GBmicroSDHC 10 Plus rot" always-float-label></paper-input>
+	
+	<paper-dropdown-menu name="channel-article-dropdown" label="Kategorie" placeholder="...bitte wählen" noink=true no-animations=true>
+		<paper-listbox class="dropdown-content">
+			<paper-item>some categories go here</paper-item>
+	  </paper-listbox>	
+	</paper-dropdown-menu>
+
+	<div class="inline-elements">
+		<paper-input label="Menge" placeholder="200" always-float-label></paper-input>
+		<paper-input label="Festpreis" style="padding-left: 5px;" placeholder="16,95" always-float-label></paper-input>
+	</div>
+
+	  <el-menu class="el-menu--inline" #menu8 ></el-menu>
+</el-erwin>

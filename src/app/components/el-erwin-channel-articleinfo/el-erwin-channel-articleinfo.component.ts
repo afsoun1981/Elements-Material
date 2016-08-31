@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild} from '@angular/core';
+import { Component, AfterViewInit, ViewChild} from '@angular/core';
 import { ElErwinComponent } from "../el-erwin";
 import { ElMenuComponent } from "../el-menu";
 import { PolymerElement } from '@vaadin/angular2-polymer';
@@ -16,12 +16,22 @@ import { PolymerElement } from '@vaadin/angular2-polymer';
     PolymerElement('paper-input')
   ]
 })
-export class ElErwinChannelArticleinfoComponent implements OnInit {
+export class ElErwinChannelArticleinfoComponent implements AfterViewInit {
 	@ViewChild("erwin7") erwin7 : ElErwinComponent;
+  @ViewChild("menu8") menu8 : ElMenuComponent;  
 
   constructor() {}
 
-  ngOnInit() {
+  ngAfterViewInit() {
+        window.setTimeout(() => this._setup(), 1);
   }
 
+  private _setup() : void {
+    this.menu8.title = null;
+
+    this.menu8.items = [
+      { iconpre: null, title: "Beschreibung", iconpost: "chevron_right"},
+      { iconpre: null, title: "Bilderzuordnung", iconpost: "chevron_right"},
+    ];
+  }
 }
