@@ -1,3 +1,8 @@
-<p>
-  el-mini-erwin works!
-</p>
+<h1 *ngIf="title" class="el-mini-erwin__title">{{ title }}</h1>	
+<ul class="el-mini-erwin__icons">
+	<li *ngFor="let item of icons" class="el-mini-erwin__icons__icon">
+    <button md-button class="el-mini-erwin__icons__icon__button" (click)="menuClicked(icon,$event)">
+      <md-icon *ngIf="item.icon">{{item.icon}}</md-icon>             
+    </button>
+  </li>
+</ul>
