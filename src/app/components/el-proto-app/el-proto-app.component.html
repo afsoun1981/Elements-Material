@@ -51,5 +51,43 @@
   <el-erwin-setting></el-erwin-setting>
 
   <section el-main-section>
+   <vaadin-grid id="mainGrid" selection-mode="multi" [items]="articles">
+       <table>
+         <colgroup>
+          <col name="artikel_nr" />
+          <col name="bezeichnung" />
+          <col name="h_article_nr" />
+          <col name="bestell_nr" />
+          <col name="ek_netto" />
+          <col name="rabatt" />
+          <col name="shop_vk" />
+          <col name="ebay_vk" />
+          <col name="amazon_vk" />
+          <col name="kapazitat" />
+          <col name="farbe" />
+          <col name="gewicht" />
+          <col name="hersteller" />
+          <col name="status" />
+         </colgroup>
+         <thead>
+          <tr>              
+           <th>Artikel-Nr.</th>
+           <th>Bezeichnung</th>
+           <th>H-Artikel-Nr.</th>
+           <th>Bestell-Nr.</th>
+           <th>EK netto</th>
+           <th>Rabatt</th>
+           <th>Shop VK</th>
+           <th>eBay VK</th>
+           <th>Amazon VK</th>
+           <th>Kapatzitäat</th>
+           <th>Farbe</th>
+           <th>Gewicht</th>
+           <th>Hersteller</th>
+           <th>Status</th>
+          </tr>
+        </thead>
+       </table>
+     </vaadin-grid>
   </section>
 </div>

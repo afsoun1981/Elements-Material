@@ -103,6 +103,21 @@ export class ElProtoAppComponent implements OnInit {
   public ngOnInit() {
   }
 
-  articles: Article[];
+  articles: Article[]= [{
+    artikel_nr: 100005627,
+    bezeichnung: '16 GB microSDHC Class 10 Plus Rot',
+    h_article_nr: 871079564664747,
+    bestell_nr: 1234,
+    ek_netto: 1.234,
+    rabatt: 3.2,
+    shop_vk: 3.49,
+    ebay_vk: 3.49,
+    amazon_vk: 3.49,
+    kapazitat: 16,
+    farbe: 'Rot',
+    gewicht: 50,
+    hersteller: 'Samsung',
+    status: 'OK'
+   }];
 
 }
